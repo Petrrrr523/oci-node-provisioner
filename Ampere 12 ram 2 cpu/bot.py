@@ -35,7 +35,7 @@ if not public_ssh_key or public_ssh_key.strip() == "":
 # Availability Domains to cycle through
 ads = ["USnP:EU-TURIN-1-AD-1"]
 
-total_attempts = 360
+total_attempts = 99999999999
 
 for i in range(1, total_attempts + 1):
     current_ad = ads[(i - 1) % len(ads)]
@@ -79,4 +79,4 @@ for i in range(1, total_attempts + 1):
             print(f"-> API Error: {e.message}")
             
     if i < total_attempts:
-        time.sleep(60)
+        time.sleep(5)
